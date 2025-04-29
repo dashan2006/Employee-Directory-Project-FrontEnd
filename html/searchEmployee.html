@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #d0e7ff, #f1f8ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-header {
+      background: linear-gradient(90deg, #0d6efd, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0.8rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      box-shadow: inset 0 -2px 8px rgba(0,0,0,0.05);
+    }
+
+    .form-control {
+      border-radius: 0.6rem;
+      padding: 12px;
+    }
+
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .btn-primary {
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 0.6rem;
+      background: linear-gradient(to right, #0d6efd, #3b82f6);
+      border: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    #results {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 0.6rem;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="card-header">
+      🔍 Search Employee
+    </div>
+    
+    <div class="mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Enter ID or Name">
+    </div>
+
+    <div class="d-grid">
+      <button onclick="searchCustomer()" class="btn btn-primary">Search Now</button>
+    </div>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="searchEmployee.html"></script>  
+</body>
+</html>
