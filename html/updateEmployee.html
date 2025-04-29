@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update Employee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #fff9c4, #fff176);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 550px;
+      background: white;
+      padding: 40px 35px;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #fbc02d, #fdd835);
+      color: #333;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 15px;
+      border-radius: 0.8rem;
+      margin-bottom: 25px;
+      box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+      padding: 12px;
+      border-radius: 0.6rem;
+      margin-bottom: 15px;
+      border: 1px solid #fbc02d;
+    }
+
+    .form-control:focus {
+      border-color: #fdd835;
+      box-shadow: 0 0 0 0.2rem rgba(253, 216, 53, 0.3);
+    }
+
+    .btn-warning {
+      width: 100%;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 0.6rem;
+      background: linear-gradient(135deg, #fbc02d, #fdd835);
+      border: none;
+      color: #333;
+      transition: all 0.2s ease;
+    }
+
+    .btn-warning:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(253, 216, 53, 0.4);
+    }
+
+    #updateResult {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 0.6rem;
+      font-weight: 500;
+    }
+
+    #updateResult p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card-header">✏ Update Employee</div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Enter Employee ID" id="updateId" />
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="New Name" id="updateName" />
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="New Gender" id="updateGender" />
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="New Salary" id="updateSalary" />
+    </div>
+    <button class="btn btn-warning" onclick="updateEmployee()">Update Employee</button>
+    <div id="updateResult"></div>
+  </div>
+
+  <script src="updateEmployee.html"></script>
+</body>
+</html>
